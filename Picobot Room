@@ -1,0 +1,9 @@
+0 x*** -> N 0   #if N is open, go N
+0 Nx** -> E 0   #if N is closed but E is open, go E
+0 NE** -> X 1   #Otherwise, go to state 1
+
+1 **x* -> W 1   #if W is open, go W
+1 **Wx -> S 2   #If W is closed but S is open, go S and change to state 2
+
+2 *x** -> E 2   #if E is open, go E
+2 *E*x -> S 1   #If E is closed but S is open, go S and change to state 1
